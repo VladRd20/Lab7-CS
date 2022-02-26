@@ -32,8 +32,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.Text_Rezultat = new System.Windows.Forms.TextBox();
             this.Button_Click = new System.Windows.Forms.Button();
+            this.Text_Rezult = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Figura_Text
@@ -56,6 +56,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Cateta 1";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -64,6 +65,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 2;
+            this.textBox2.Text = "Cateta 2";
             // 
             // textBox3
             // 
@@ -71,18 +73,11 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 3;
-            // 
-            // Text_Rezultat
-            // 
-            this.Text_Rezultat.Location = new System.Drawing.Point(162, 40);
-            this.Text_Rezultat.Name = "Text_Rezultat";
-            this.Text_Rezultat.Size = new System.Drawing.Size(312, 20);
-            this.Text_Rezultat.TabIndex = 4;
-            this.Text_Rezultat.TextChanged += new System.EventHandler(this.Rezultat_TextChanged);
+            this.textBox3.Text = "Ipotenuza";
             // 
             // Button_Click
             // 
-            this.Button_Click.Location = new System.Drawing.Point(162, 67);
+            this.Button_Click.Location = new System.Drawing.Point(268, 77);
             this.Button_Click.Name = "Button_Click";
             this.Button_Click.Size = new System.Drawing.Size(100, 46);
             this.Button_Click.TabIndex = 5;
@@ -90,13 +85,20 @@
             this.Button_Click.UseVisualStyleBackColor = true;
             this.Button_Click.Click += new System.EventHandler(this.Button_Click_Click);
             // 
+            // Text_Rezult
+            // 
+            this.Text_Rezult.Location = new System.Drawing.Point(162, 51);
+            this.Text_Rezult.Name = "Text_Rezult";
+            this.Text_Rezult.Size = new System.Drawing.Size(312, 20);
+            this.Text_Rezult.TabIndex = 6;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 333);
+            this.Controls.Add(this.Text_Rezult);
             this.Controls.Add(this.Button_Click);
-            this.Controls.Add(this.Text_Rezultat);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -114,7 +116,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox Text_Rezultat;
         private System.Windows.Forms.Button Button_Click;
+        private System.Windows.Forms.TextBox Text_Rezult;
     }
 }

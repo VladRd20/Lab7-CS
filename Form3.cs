@@ -5,7 +5,9 @@ namespace Lab7_CS
 {
     public partial class Form3 : Form
     {
-        double pi = 3.14, suma = 0;
+        double pi = 3.14;
+        double aria = 0, suma = 0;
+        bool dreptunghic = false;
 
         public Form3()
         {
@@ -39,13 +41,21 @@ namespace Lab7_CS
 
         private void Button_Click_Click(object sender, EventArgs e)
         {
-            if (Figura_Text.SelectedItem.ToString() == "Triunghi") suma = Convert.ToInt32(textBox1) + Convert.ToInt32(textBox2) + Convert.ToInt32(textBox3);
-            
+            if (Figura_Text.SelectedItem.ToString() == "Triunghi")
+            {
+                if (Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1) + Convert.ToDouble(textBox2) * Convert.ToDouble(textBox2) == Convert.ToDouble(textBox3) * Convert.ToDouble(textBox3))
+                    dreptunghic = true;
+                else if (Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1) + Convert.ToDouble(textBox3) * Convert.ToDouble(textBox3) == Convert.ToDouble(textBox2) * Convert.ToDouble(textBox2))
+                    dreptunghic = true;
+                else if (Convert.ToDouble(textBox3) * Convert.ToDouble(textBox3) + Convert.ToDouble(textBox2) * Convert.ToDouble(textBox2) == Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1))
+                    dreptunghic = true;
+                else
+                {
+                    aria = Convert.ToDouble(textBox1.Text) + Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox3.Text);
+                    Text_Rezult.Text = "Aria triunghiului: " + aria.ToString("0.00");
+                }
+            }
         }
 
-        private void Rezultat_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
