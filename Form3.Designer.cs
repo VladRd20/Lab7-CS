@@ -32,7 +32,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.Rezultat = new System.Windows.Forms.TextBox();
+            this.Text_Rezultat = new System.Windows.Forms.TextBox();
             this.Button_Click = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -72,13 +72,13 @@
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 3;
             // 
-            // Rezultat
+            // Text_Rezultat
             // 
-            this.Rezultat.Location = new System.Drawing.Point(162, 40);
-            this.Rezultat.Name = "Rezultat";
-            this.Rezultat.Size = new System.Drawing.Size(312, 20);
-            this.Rezultat.TabIndex = 4;
-            this.Rezultat.TextChanged += new System.EventHandler(this.Rezultat_TextChanged);
+            this.Text_Rezultat.Location = new System.Drawing.Point(162, 40);
+            this.Text_Rezultat.Name = "Text_Rezultat";
+            this.Text_Rezultat.Size = new System.Drawing.Size(312, 20);
+            this.Text_Rezultat.TabIndex = 4;
+            this.Text_Rezultat.TextChanged += new System.EventHandler(this.Rezultat_TextChanged);
             // 
             // Button_Click
             // 
@@ -96,7 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 333);
             this.Controls.Add(this.Button_Click);
-            this.Controls.Add(this.Rezultat);
+            this.Controls.Add(this.Text_Rezultat);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -114,7 +114,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox Rezultat;
+        private System.Windows.Forms.TextBox Text_Rezultat;
         private System.Windows.Forms.Button Button_Click;
     }
 }

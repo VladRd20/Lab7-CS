@@ -40,7 +40,7 @@ namespace Lab7_CS
         private void Button_Click_Click(object sender, EventArgs e)
         {
             if (Figura_Text.SelectedItem.ToString() == "Triunghi") suma = Convert.ToInt32(textBox1) + Convert.ToInt32(textBox2) + Convert.ToInt32(textBox3);
-            Rezultat.Text = suma.ToString();
+            
         }
 
         private void Rezultat_TextChanged(object sender, EventArgs e)
