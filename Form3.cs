@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace Lab7_CS
 {
+
     public partial class Form3 : Form
     {
         double pi = 3.14;
-        double aria = 0, suma = 0;
-        bool dreptunghic = false;
+        double aria = 0, perimetru = 0, suma = 0;
 
         public Form3()
         {
@@ -43,17 +44,25 @@ namespace Lab7_CS
         {
             if (Figura_Text.SelectedItem.ToString() == "Triunghi")
             {
-                if (Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1) + Convert.ToDouble(textBox2) * Convert.ToDouble(textBox2) == Convert.ToDouble(textBox3) * Convert.ToDouble(textBox3))
-                    dreptunghic = true;
-                else if (Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1) + Convert.ToDouble(textBox3) * Convert.ToDouble(textBox3) == Convert.ToDouble(textBox2) * Convert.ToDouble(textBox2))
-                    dreptunghic = true;
-                else if (Convert.ToDouble(textBox3) * Convert.ToDouble(textBox3) + Convert.ToDouble(textBox2) * Convert.ToDouble(textBox2) == Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1))
-                    dreptunghic = true;
-                else
-                {
-                    aria = Convert.ToDouble(textBox1.Text) + Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox3.Text);
-                    Text_Rezult.Text = "Aria triunghiului: " + aria.ToString("0.00");
-                }
+              
+                perimetru = (Convert.ToDouble(textBox1.Text) + Convert.ToDouble(textBox2.Text) + Convert.ToDouble(textBox3.Text)) / 2;
+                aria = Math.Sqrt(perimetru * (perimetru - Convert.ToDouble(textBox1.Text)) * (perimetru - Convert.ToDouble(textBox2.Text) * (perimetru - Convert.ToDouble(textBox3.Text))));
+                Text_Rezult.Text = "Aria Triunghiului: " + aria.ToString("0.00");
+
+            }
+            if (Figura_Text.SelectedItem.ToString() == "Dreptunghi")
+            {
+
+                aria = Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox2.Text);
+                Text_Rezult.Text = "Aria Dreptunghiului: " + aria.ToString("0.00");
+
+            }
+            if (Figura_Text.SelectedItem.ToString() == "Cerc")
+            {
+
+                aria = pi * Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1.Text);
+                Text_Rezult.Text = "Aria Cercului: " + aria.ToString("0.00");
+
             }
         }
 
